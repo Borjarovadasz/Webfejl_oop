@@ -44,6 +44,15 @@ getTierlevel() {
 }
 }
 
+function printTierLevel(nickname, getTierlevel)
+{
+    console.log(nickname + " játékos " + getTierlevel + " ligában van." )
+}
+
+
+printTierLevel("János", "Arany")
+printTierLevel("Alszik", "Kuka")
+
 
 
 
