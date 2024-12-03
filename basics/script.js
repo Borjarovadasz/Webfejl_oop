@@ -62,3 +62,30 @@ console.log(gomszab)
 
 gomszab.play()
 console.log(gomszab.getTierlevel())
+
+class Ember {
+    constructor(nev = "Géza") {
+        this.nev = nev;
+    }
+
+    MiaNeve() {
+        return `Név: ${this.nev}`;
+    }
+}
+
+
+class Diak extends Ember {
+    constructor(nev, sulko) {
+        super(nev)
+        this.sulko = sulko
+    }
+
+    HovaJar() {
+        return `Iskola: ${this.sulko}`;
+    }
+}
+
+
+const tancsi1 = new Diak("Alszik", "Bolyia");
+console.log(tancsi1.MiaNeve())
+console.log(tancsi1.HovaJar())
