@@ -12,7 +12,7 @@ function createRow(companion){
 
    // TODO 7
     const cell = createCell(tableRow)
-    tableRow.id = companion.id
+    cell.id = companion.id
 
     cell.innerHTML = companion.getname()
     
@@ -79,13 +79,23 @@ function refreshProductList(companion){ //TODO
  * 
  * @param {HTMLFormElement} form 
  */
-function addCompanion(form){ //TODO 
+function addCompanion(form, factory){ //TODO 
     const firstName =form.querySelector('#cfirstname')
     const lastname =form.querySelector('#clastname')
     const area = form.querySelector('#carea')
     const firstNameValue = firstName.value;
     const lastNameValue = lastname.value;
     const areaValue = area.value;
+
+    const mano = {
+        id : factory.ujid(),
+        firstName : firstNameValue,
+        lastName : lastNameValue,
+        area : areaValue
+    }
+
+    factory.addmano(mano)
+
     // TODO 6
 }
 

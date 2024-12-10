@@ -9,6 +9,10 @@ class Factory{
         this.manolist.push(mano)
         createRow(mano)
     }
+
+    ujid() {
+        return this.manolist.length
+    }
  // TODO 1, 2, 3, 4, 9, 10
 }
 /*

@@ -73,5 +73,7 @@ initTable()
 function checkEventListener(e){
     const row = e.currentTarget.parentElement.parentElement;
     const companionId = row.id;
+
+    
     // TODO 10
 }
