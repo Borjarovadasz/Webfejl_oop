@@ -81,8 +81,22 @@ class DataManager
     this.#updateCallBack(result)
     }
 
+    filter(callback) {
+ 
+            const result = []
+            
+            for(const element of this.#array) {
+                if(callback(element) === age) {
     
-}
+                }
+                result.push(element)
+              
+        }
+        this.#updateCallBack(result)
+        }
+    
+    }
+
 
 
 class Datatable 
@@ -125,3 +139,31 @@ class Datatable
 const pelda1 = new DataManager([{nev:"Feri", eletkor: 17}, {nev:"Feri", eletkor: 18}, {nev:"Gábor", eletkor: 17}])
 
 const table = new Datatable(pelda1)
+
+const element = document.createElement('input')
+element.type = "file"
+document.body.appendChild(element)
+element.addEventListener('change',(e) => {
+    const tfie = e.currentTarget.files[0]
+    
+const freader = new FileReader
+freader.readAsText(tfie)
+
+
+freader.onload = ( ) =>{
+    const content = freader.result   
+    const contentrow = content.split('\n')
+    for(const row of contentrow) {
+        const split = row.split(';')
+
+        const person = {nev: split[0], eletkor: Number(split[1])}
+        pelda1.add(person)
+        }
+
+       
+    }
+
+
+})
+
+
